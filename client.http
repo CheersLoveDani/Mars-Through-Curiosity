@@ -1,1 +1,1 @@
-GET 
+GET https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Bu4Kx1OEw6hUEvID71Ebl9r4k3GXPEQ5kx5I1Wjf
