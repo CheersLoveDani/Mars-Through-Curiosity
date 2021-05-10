@@ -1,13 +1,13 @@
 function Footer() {
   return (
-    <footer className='footer'>
-      <button>
+    <div className='footer'>
+      <button className='button '>
         Previous Sol
       </button>
       <button>
         Next Sol
       </button>
-    </footer>
+    </div>
   )
 }
 
