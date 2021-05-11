@@ -43,33 +43,48 @@ function Main() {
 
   return (
     <>
-      <h2>This is the main page</h2>
       <img className="rover image is-1x1" src={Rover} />
-      <div className='columns '>
-        <h4>FHAZ</h4>
-        <CameraCard
-          imgArray={allPhotos ? getImages('FHAZ') : []}
-        />
-        <h4>RHAZ</h4>
-        <CameraCard
-          imgArray={allPhotos ? getImages('RHAZ') : []}
-        />
-        <h4>MAST</h4>
-        <CameraCard
-          imgArray={allPhotos ? getImages('MAST') : []}
-        />
-        <h4>CHEMCAM</h4>
-        <CameraCard
-          imgArray={allPhotos ? getImages('CHEMCAM') : []}
-        />
-        <h4>NAVCAM</h4>
-        <CameraCard
-          imgArray={allPhotos ? getImages('NAVCAM') : []}
-        />
-        <h4>MAHLI</h4>
-        <CameraCard
-          imgArray={allPhotos ? getImages('MAHLI') : []}
-        />
+      <div className="container">
+        <div className="items column-1">
+          <div className="card-block card-1">
+            <h4>FHAZ</h4>
+            <CameraCard
+              imgArray={allPhotos ? getImages('FHAZ') : []}
+            />
+          </div>
+          <div className="card-block card-2">
+            <h4>RHAZ</h4>
+            <CameraCard
+              imgArray={allPhotos ? getImages('RHAZ') : []}
+            />
+          </div>
+          <div className="card-block card-3">
+            <h4>MAST</h4>
+            <CameraCard
+              imgArray={allPhotos ? getImages('MAST') : []}
+            />
+          </div >
+        </div>
+        <div className="items column-2">
+          <div className="card-block card-4">
+            <h4>CHEMCAM</h4>
+            <CameraCard
+              imgArray={allPhotos ? getImages('CHEMCAM') : []}
+            />
+          </div >
+          <div className="card-block card-5">
+            <h4>MAHLI</h4>
+            <CameraCard
+              imgArray={allPhotos ? getImages('MAHLI') : []}
+            />
+          </div >
+          <div className="card-block card-6">
+            <h4>NAVCAM</h4>
+            <CameraCard
+              imgArray={allPhotos ? getImages('NAVCAM') : []}
+            />
+          </div >
+        </div >
       </div>
     </>
   )

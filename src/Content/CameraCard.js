@@ -1,8 +1,15 @@
 import React from 'react'
+import { useParams } from 'react-router'
 
 
 function CameraCard({ imgArray }) {
   const [index, setIndex] = React.useState(0)
+  const { day } = useParams()
+
+  React.useEffect(() => {
+    setIndex(0)
+  }, [day])
+
   const handleClick = (e) => {
     if (e.target.id === 'left' && index > 0) {
       setIndex(index - 1)
@@ -12,10 +19,10 @@ function CameraCard({ imgArray }) {
   }
 
   return (
-    <div className='is-flex-direction-column column'>
+    <div className='card is-flex-direction-column column'>
       <div>
         <img
-          className='image camera-images is-one-third'
+          className='image cropped camera-images is-one-third'
           src={
             imgArray.length > 0 ?
               imgArray[index].img_src :
@@ -23,7 +30,7 @@ function CameraCard({ imgArray }) {
           }
         />
       </div>
-      <div>
+      <div className="navigate">
         <button id='left' className='button is-pulled-left' onClick={handleClick}>
           {'<'}
         </button>

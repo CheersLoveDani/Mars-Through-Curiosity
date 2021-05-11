@@ -1,5 +1,10 @@
 @import "bulma";
 
+* {
+  font-family: "Exo 2", sans-serif;
+  box-sizing: border-box;
+}
+
 img.rover {
   display: block;
   margin: 20px auto;
@@ -7,7 +12,70 @@ img.rover {
   width: auto;
 }
 
-img.camera-images {
-  height: 200px;
-  width: auto;
+.rover {
+  display: flex;
+}
+
+.container {
+  display: flex;
+}
+
+// .column-1 {
+//   flex: flex-start;
+// }
+// .column-2 {
+//   flex: flex-end;
+// }
+
+// .card-1 {
+//   position: absolute;
+//   top: 0;
+// }
+
+// .card-2 {
+//   position: absolute;
+//   top: 600px;
+// }
+
+// .card-3 {
+//   position: absolute;
+//   top: 1200px;
+// }
+
+// .card-4 {
+//   position: absolute;
+//   top: 0;
+//   left: 800px;
+// }
+
+// .card-5 {
+//   position: absolute;
+//   top: 600px;
+//   left: 800px;
+// }
+
+// .card-6 {
+//   position: absolute;
+//   top: 1200px;
+//   left: 800px;
+// }
+
+.navigate {
+  display: flex;
+}
+
+.navigate p {
+  padding: 10px;
+}
+
+.card {
+  border: 1px solid red;
+  height: fit-content;
+  width: 300px;
+}
+
+.cropped {
+  height: 300px;
+  width: fit-content;
+  object-fit: cover;
 }
