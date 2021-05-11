@@ -8,74 +8,19 @@
 img.rover {
   display: block;
   margin: 20px auto;
-  height: 500px;
-  width: auto;
+  object-fit: cover;
 }
 
 .rover {
   display: flex;
 }
 
-.container {
-  display: flex;
-}
-
-// .column-1 {
-//   flex: flex-start;
-// }
-// .column-2 {
-//   flex: flex-end;
-// }
-
-// .card-1 {
-//   position: absolute;
-//   top: 0;
-// }
-
-// .card-2 {
-//   position: absolute;
-//   top: 600px;
-// }
-
-// .card-3 {
-//   position: absolute;
-//   top: 1200px;
-// }
-
-// .card-4 {
-//   position: absolute;
-//   top: 0;
-//   left: 800px;
-// }
-
-// .card-5 {
-//   position: absolute;
-//   top: 600px;
-//   left: 800px;
-// }
-
-// .card-6 {
-//   position: absolute;
-//   top: 1200px;
-//   left: 800px;
-// }
-
-.navigate {
-  display: flex;
-}
-
-.navigate p {
-  padding: 10px;
-}
-
 .card {
-  border: 1px solid red;
-  height: fit-content;
-  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  object-fit: fill;
+  margin: 20px;
 }
 
-.cropped {
-  height: 300px;
-  width: fit-content;
+.card-image {
   object-fit: cover;
 }

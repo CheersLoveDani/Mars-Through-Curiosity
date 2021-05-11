@@ -29,8 +29,6 @@ function Footer() {
     const getData = async () => {
       try {
         const res = await getManifest()
-        console.log('fetching manifest')
-        console.log(res.data)
         setManifest(res.data)
 
       } catch (err) {
@@ -39,12 +37,11 @@ function Footer() {
     }
     getData()
   }, [])
-  // console.log(manifest)
 
   return (
     <footer className='footer'>
       <div className='content has-text-centered'>
-        <p className='has-text-centered'>{'Earth Date:'}</p>
+
         {/* <button className='button'>
           -10
         </button>

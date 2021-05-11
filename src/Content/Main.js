@@ -10,13 +10,13 @@ function Main() {
   const [allPhotos, setAllPhotos] = React.useState(null)
   const { day } = useParams()
 
+  // * Fetch Data when the url changes
   React.useEffect(() => {
     // Get photos
     const getData = async () => {
       try {
         const res = await getAllPhotos(day)
         setAllPhotos(res.data)
-        console.log('useEffect running')
       } catch (err) {
         console.log(err)
       }
@@ -24,6 +24,7 @@ function Main() {
     getData()
   }, [day])
 
+  // * Get an array of sorted images
   const getImages = (camera) => {
     if (allPhotos) {
       let num = 0
@@ -37,55 +38,52 @@ function Main() {
       )
     }
   }
-
-
-  console.log('params', useParams(), day)
-
   return (
     <>
+      <h1 className="title has-text-centered">Curiosity</h1>
       <img className="rover image is-1x1" src={Rover} />
-      <div className="container">
-        <div className="items column-1">
-          <div className="card-block card-1">
-            <h4>FHAZ</h4>
+      <div className="columns">
+        <div className="column">
+          <div>
+            <h4 className='has-text-centered'>FHAZ</h4>
             <CameraCard
               imgArray={allPhotos ? getImages('FHAZ') : []}
             />
           </div>
-          <div className="card-block card-2">
-            <h4>RHAZ</h4>
+          <div>
+            <h4 className='has-text-centered'>RHAZ</h4>
             <CameraCard
               imgArray={allPhotos ? getImages('RHAZ') : []}
             />
           </div>
-          <div className="card-block card-3">
-            <h4>MAST</h4>
+          <div>
+            <h4 className='has-text-centered'>MAST</h4>
             <CameraCard
               imgArray={allPhotos ? getImages('MAST') : []}
             />
           </div >
         </div>
-        <div className="items column-2">
-          <div className="card-block card-4">
-            <h4>CHEMCAM</h4>
+        <div className="column">
+          <div>
+            <h4 className='has-text-centered'>CHEMCAM</h4>
             <CameraCard
               imgArray={allPhotos ? getImages('CHEMCAM') : []}
             />
-          </div >
-          <div className="card-block card-5">
-            <h4>MAHLI</h4>
+          </div>
+          <div>
+            <h4 className='has-text-centered'>MAHLI</h4>
             <CameraCard
               imgArray={allPhotos ? getImages('MAHLI') : []}
             />
           </div >
-          <div className="card-block card-6">
-            <h4>NAVCAM</h4>
+          <div>
+            <h4 className='has-text-centered'>NAVCAM</h4>
             <CameraCard
               imgArray={allPhotos ? getImages('NAVCAM') : []}
             />
           </div >
         </div >
-      </div>
+      </div >
     </>
   )
 }

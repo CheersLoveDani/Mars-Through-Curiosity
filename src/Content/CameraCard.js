@@ -6,10 +6,12 @@ function CameraCard({ imgArray }) {
   const [index, setIndex] = React.useState(0)
   const { day } = useParams()
 
+  // * Reset each card back to index 0 when url changes
   React.useEffect(() => {
     setIndex(0)
   }, [day])
 
+  // * 
   const handleClick = (e) => {
     if (e.target.id === 'left' && index > 0) {
       setIndex(index - 1)
@@ -20,9 +22,9 @@ function CameraCard({ imgArray }) {
 
   return (
     <div className='card is-flex-direction-column column'>
-      <div>
+      <div className='is-flex is-justify-content-center'>
         <img
-          className='image cropped camera-images is-one-third'
+          className='image card-image'
           src={
             imgArray.length > 0 ?
               imgArray[index].img_src :
@@ -30,13 +32,22 @@ function CameraCard({ imgArray }) {
           }
         />
       </div>
-      <div className="navigate">
-        <button id='left' className='button is-pulled-left' onClick={handleClick}>
+      <div className="columns is-gapless">
+        <button
+          id='left'
+          className='button is-pulled-left'
+          onClick={handleClick}
+        >
           {'<'}
         </button>
-
-        <p className='is-centered'>{imgArray.length > 0 ? `${index + 1} / ${imgArray.length}` : 'No Signal'}</p>
-        <button id='right' className='button is-pulled-right' onClick={handleClick}>
+        <p className='column has-text-centered'>
+          {imgArray.length > 0 ? `${index + 1} / ${imgArray.length}` : 'No Signal'}
+        </p>
+        <button
+          id='right'
+          className='button is-pulled-right'
+          onClick={handleClick}
+        >
           {'>'}
         </button>
       </div>
