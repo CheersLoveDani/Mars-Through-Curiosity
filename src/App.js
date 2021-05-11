@@ -1,14 +1,15 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Footer from './Common/Footer'
 import Main from './Content/Main'
 
 function App() {
   return (
-    <>
-      <h1>Hello World!</h1>
-      <Main />
+    <BrowserRouter>
+      <Switch>
+        <Route path='/:day' component={Main} />
+      </Switch>
       <Footer />
-    </>
-
+    </BrowserRouter>
   )
 }
 

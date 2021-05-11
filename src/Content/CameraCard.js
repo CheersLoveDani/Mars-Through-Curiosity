@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 
 function CameraCard({ imgArray }) {
@@ -15,7 +15,7 @@ function CameraCard({ imgArray }) {
     <div className='is-flex-direction-column column'>
       <div>
         <img
-          className='image is-one-third'
+          className='image camera-images is-one-third'
           src={
             imgArray.length > 0 ?
               imgArray[index].img_src :

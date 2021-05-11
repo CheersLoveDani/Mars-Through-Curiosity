@@ -1,4 +1,12 @@
+import { useHistory } from 'react-router'
+
 function Footer() {
+  const history = useHistory()
+
+  const handleChange = (e) => {
+    history.push('/' + e.target.value)
+  }
+
   return (
     <footer className='footer'>
       <div className='content has-text-centered'>
@@ -8,7 +16,7 @@ function Footer() {
         <button className='button'>
           -1
         </button>
-        <input className='input is-inline' placeholder='Sol Date'>
+        <input type="number" className='input is-inline' placeholder='Sol Days: e.g. 1000' onChange={handleChange}>
 
         </input>
         <button className='button'>

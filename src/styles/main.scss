@@ -1,6 +1,13 @@
 @import "bulma";
 
 img.rover {
-  height: 300px;
-  width: 300px;
+  display: block;
+  margin: 20px auto;
+  height: 500px;
+  width: auto;
+}
+
+img.camera-images {
+  height: 200px;
+  width: auto;
 }
