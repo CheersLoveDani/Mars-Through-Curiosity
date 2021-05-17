@@ -24,7 +24,7 @@ function Main() {
     getData()
   }, [day])
 
-  // * Get an array of sorted images
+  // * Get an array of sorted imaages
   const getImages = (camera) => {
     if (allPhotos) {
       let num = 0
