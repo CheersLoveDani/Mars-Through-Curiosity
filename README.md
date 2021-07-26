@@ -159,3 +159,4 @@ The footer had to be vaguely connected to everything else since we were pulling 
   )
 }
 ```
+![](Screenshots/Cam_Pics.png)
