@@ -160,4 +160,19 @@ The footer had to be vaguely connected to everything else since we were pulling 
 }
 ```
 
+## Visuals
+
+Overall we wanted the images to display as close to full resolution as possible since the cameras on curiosity are truly spectacular. We had a nice header image of the rover followed by the 6 main cameras.
+
+<img src='Screenshots/Header.png'>
 <img src='Screenshots/Cam_Pics.png'>
+<img src='Screenshots/Cam_Pics_2.png'>
+<img src='Screenshots/Cam_Pics_3.png'>
+
+## Challenges
+
+The key challenges for this project were mostly to do with error handling. After the API was set up we kept finding new bugs to do with empty data slots being sent back since Curiosity didn't send back data every day. To solve this problem we had to use a number of checks and placeholders for when data came back empty. This was a good learning experience in thoroughly testing a site and looking for common slip ups.
+
+## Wins
+
+We managed to squeeze in a few stretch goals we had like having a random day button and filtering nicely through all the days up and down. In general the entire project was special to me since I am very interested in space and the industry and Curiosity is a very very cool rover. Using more of the NASA API would definitely be something I would be interested in exploring further in the future.
