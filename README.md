@@ -1,9 +1,14 @@
 # GA Project - Mars Through Curiosity
 
+### Links
+
+https://sirdan-mars-through-curiosity.netlify.app/ <-- Try it here!
+
+https://github.com/sirdantheawesome/Mars-Through-Curiosity <-- Github
+
 ## Approach
 
 This was a pairs project in which we needed to create a React website which used an external API. Me and my programming partner both had a big interest in NASA and quickly found that they have a really good API system. We decided that we would use the rover API to create our website. Our main goals for the project were:
-
 
 - Display all main cameras from the Mars Curiosity Rover
 - Display different images based on the Mars Sol date
@@ -20,7 +25,9 @@ Since for this project we had not fully learnt git branches we ended up using Li
 # The code
 
 ## Main layout
+
 We started setting up the main page with a rough layout and some placeholder images so that we could start setting up how we wanted the main page to function.
+
 ```html
   return (
     <>
@@ -78,63 +85,56 @@ We started setting up the main page with a rough layout and some placeholder ima
 We then set up a Camera Card element which we could replace our hard coded placeholders with. These still used placeholder values for now.
 
 ```html
-  return (
-    <div className='card is-flex-direction-column column'>
-      <div className='is-flex is-justify-content-center'>
-        <img
-          className='image'
-          src={
-            imgArray.length > 0 ?
-              imgArray[index].img_src :
-              'https://wallpapercave.com/wp/wp7002139.gif'
-          }
-        />
-      </div>
-      <div className="columns is-gapless">
-        <button
-          id='left'
-          className='button is-pulled-left'
-          onClick={handleClick}
-        >
-          {'<'}
-        </button>
-        <p className='column has-text-centered'>
-          {imgArray.length > 0 ? `${index + 1} / ${imgArray.length}` : 'No Signal'}
-        </p>
-        <button
-          id='right'
-          className='button is-pulled-right'
-          onClick={handleClick}
-        >
-          {'>'}
-        </button>
-      </div>
-    </div >
-  )
-}
+return (
+<div className="card is-flex-direction-column column">
+  <div className="is-flex is-justify-content-center">
+    <img className="image" src="{" imgArray.length /> 0 ?
+    imgArray[index].img_src : 'https://wallpapercave.com/wp/wp7002139.gif' } />
+  </div>
+  <div className="columns is-gapless">
+    <button id="left" className="button is-pulled-left" onClick="{handleClick}">
+      {'<'}
+    </button>
+    <p className="column has-text-centered">
+      {imgArray.length > 0 ? `${index + 1} / ${imgArray.length}` : 'No Signal'}
+    </p>
+    <button
+      id="right"
+      className="button is-pulled-right"
+      onClick="{handleClick}"
+    >
+      {'>'}
+    </button>
+  </div>
+</div>
+) }
 ```
+
 ## NASA API
 
 After setting up the main page and the Camera Card we decided it was time to hook up the NASA API so that we could start properly loading in images for our website. To fetch data from the API we used Axios. We also had to sign up and get our unique API key which we could use for the site. This was stored in our .env file to keep it a secret.
 
 ```js
-import axios from 'axios'
+import axios from "axios";
 
-const photoBaseUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol='
-const manifestBaseUrl = 'https://api.nasa.gov/mars-photos/api/v1/manifests/Curiosity/?'
+const photoBaseUrl =
+  "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=";
+const manifestBaseUrl =
+  "https://api.nasa.gov/mars-photos/api/v1/manifests/Curiosity/?";
 
-const API_KEY = `api_key=${process.env.REACT_APP_API_KEY}`
+const API_KEY = `api_key=${process.env.REACT_APP_API_KEY}`;
 
 export function getAllPhotos(day) {
-  return axios.get(photoBaseUrl + day + '&' + API_KEY)
+  return axios.get(photoBaseUrl + day + "&" + API_KEY);
 }
 
 export function getManifest() {
-  return axios.get(manifestBaseUrl + API_KEY)
+  return axios.get(manifestBaseUrl + API_KEY);
 }
 ```
 
 ## Footer
+
 The footer had to be vaguely connected to everything else since we were pulling information about the Sol day in it and passing it to the API. We also implemented error handling into the footer to make sure you couldn't land on a day which didn't exist yet.
 
 ```html
@@ -159,4 +159,5 @@ The footer had to be vaguely connected to everything else since we were pulling 
   )
 }
 ```
-![](Screenshots/Cam_Pics.png)
+
+<img src='Screenshots/Cam_Pics.png'>
