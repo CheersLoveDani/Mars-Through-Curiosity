@@ -2,7 +2,7 @@
 
 ## Overview
 
-For the second project we were tasked with making at GA we had to make a React app in 48 hours working in pairs using an external API of our choosing. My partner for this project was [Abubakr Siddique](https://github.com/AbuBakr-S).
+For the second project at GA we had to make a React app in 48 hours working in pairs using an external API of our choosing. My partner for this project was [Abubakr Siddique](https://github.com/AbuBakr-S).
 
 https://sirdan-mars-through-curiosity.netlify.app/ <-- Try it here!
 
