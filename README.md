@@ -1,26 +1,38 @@
 # GA Project - Mars Through Curiosity
 
-### Links
+## Overview
+
+For the second project we were tasked with making at GA we had to make a React app in 48 hours working in pairs using an external API of our choosing. My partner for this project was [Abubakr Siddique](https://github.com/AbuBakr-S).
 
 https://sirdan-mars-through-curiosity.netlify.app/ <-- Try it here!
 
-https://github.com/sirdantheawesome/Mars-Through-Curiosity <-- Github
+## Brief
+
+- Make a website using the **React framework.**
+- Use an external **API** and access its info using **Axios.**
+- Deploy the project online using **Netlify.**
+- Finish the project in **48 hours.**
+- Use the **Bulma CSS framework** for styling.
 
 ## Approach
 
-This was a pairs project in which we needed to create a React website which used an external API. Me and my programming partner both had a big interest in NASA and quickly found that they have a really good API system. We decided that we would use the rover API to create our website. Our main goals for the project were:
+Me and my programming partner both had a big interest in NASA and quickly found that they have a really good API system. We decided that we would use the rover API to create our website. Our main goals for the project were:
 
-- Display all main cameras from the Mars Curiosity Rover
-- Display different images based on the Mars Sol date
-- Be able to scroll through multiple images on a single day for the same camera
-- Be able to change the current day being shown
-- Properly error handle when either the Sol day was missing or images were missing from that day
+- Display all main cameras from the Mars Curiosity Rover.
+- Display different images based on the Mars Sol date.
+- Be able to scroll through multiple images on a single day for the same camera.
+- Be able to change the current day being shown.
+- Properly error handle when either the Sol day was missing or images were missing from that day.
 
 Design wise we were aiming for a brief intro page explaining the project with the main page being accessible using a button. The main page design we wanted to be picture of the rover with camera images being shown below (with tabs to flick through each camera) and a bottom element for selecting different Sol days.
 
 ## Task management
 
 Since for this project we had not fully learnt git branches we ended up using LiveServer to do pair programming with both of us discussing and working on the project at the same time for the most part and making sure all elements looked right to both of us. There were benefits of this approach as we felt we got a much more complete understanding of the whole program which was helpful for learning. We did find however that after we had learnt git branching and working on different aspects at the same time that it is a much more efficient approach and preferable in most cases.
+
+## Timeline
+
+Since we only had 48 hours for the project we planned to get information pulling and displaying done on the first day and leave some styling and extra goals for the second day. The first part of the first day was whiteboarding out ideas and writing some pseudo-code for roughly how we would lay out the project.
 
 # The code
 
@@ -169,6 +181,10 @@ Overall we wanted the images to display as close to full resolution as possible 
 <img src='Screenshots/Cam_Pics_2.png'>
 <img src='Screenshots/Cam_Pics_3.png'>
 
+## What I learnt
+
+This project really cemented my React framework fundamentals which was very helpful over all. More specifically I gained a deeper understanding on how React updates states and redraws elements to the webpage. I also gained helpful practice on working as part of a pair project and vocalising my thought process around solving coding challenges.
+
 ## Challenges
 
 The key challenges for this project were mostly to do with error handling. After the API was set up we kept finding new bugs to do with empty data slots being sent back since Curiosity didn't send back data every day. To solve this problem we had to use a number of checks and placeholders for when data came back empty. This was a good learning experience in thoroughly testing a site and looking for common slip ups.
@@ -176,3 +192,8 @@ The key challenges for this project were mostly to do with error handling. After
 ## Wins
 
 We managed to squeeze in a few stretch goals we had like having a random day button and filtering nicely through all the days up and down. In general the entire project was special to me since I am very interested in space and the industry and Curiosity is a very very cool rover. Using more of the NASA API would definitely be something I would be interested in exploring further in the future.
+
+## Future feature ideas
+
+- A way to search by either Earth day or Sol day would be nice, didn't quite get around to it.
+- A pop-out screen for each camera to view the images in even higher resolution.
