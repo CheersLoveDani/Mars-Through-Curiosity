@@ -6,7 +6,7 @@ For the second project at GA we had to make a React app in 48 hours working in p
 
 https://sirdan-mars-through-curiosity.netlify.app/ <-- Try it here!
 
-## Brief
+## The Brief
 
 - Make a website using the **React framework.**
 - Use an external **API** and access its info using **Axios.**
